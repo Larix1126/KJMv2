@@ -1,0 +1,50 @@
+<div>
+    <mat-card *ngFor='let post of wallData'>
+        <mat-card-title>
+            {{post.title}}
+        </mat-card-title>
+        <mat-card-content>
+            <div>
+                <p postText>
+                    {{post.text}}
+                </p> 
+                
+                <div postFooter>
+                    <div class="user">     
+                        <img class="avatar" src={{post.user.avatar}} name="avatar"/> 
+                        <div class="username"> {{post.user.name}}</div>
+                    </div>  
+                    
+                    <p>
+                        Dodano: {{post.createdAt | date:"dd.MM.yyyy"}}
+                    </p>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-accordion>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-description>
+                        Read Comments
+                      </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div class="comment" *ngFor='let comment of post.comments'>
+
+                    <p class="comment-content">
+                        {{comment.text}}
+                    </p> 
+                    <div class="comment-footer">
+                        <div class="user">     
+                            <img class="avatar" src={{comment.user.avatar}} name="avatar"/> 
+                            <div class="username"> {{comment.user.name}}</div>
+                        </div>  
+                        
+                        <p>
+                            Dodano: {{comment.createdAt | date:"dd.MM.yyyy"}}
+                        </p>
+                    </div> 
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card>
+</div>

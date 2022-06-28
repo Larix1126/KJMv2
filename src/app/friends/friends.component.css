@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+}
+mat-card{
+    width: 1200px;
+    margin-bottom: 10%;
+}
+mat-card-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    padding: 15px;
+}
+img{
+    height: 80%;
+    border-radius: 50%;
+    border: solid 5px #bdc3d3;;
+    margin: -10%;
+}

@@ -1,0 +1,11 @@
+<div>
+    <mat-card>
+        <mat-card-content>
+            <div *ngFor='let friend of friendsData'>
+               <a routerLink = "/user-page-component" routerLinkActive = "active" ariaCurrentWhenActive = "page" (click)="onNavToOrderDetails(friend)">
+                <img src = {{friend.avatar}} title = {{friend.name}} >
+            </a>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

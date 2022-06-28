@@ -1,0 +1,63 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+}
+mat-card{
+    width: 600px;
+    margin-bottom: 10%;
+}
+mat-card-content, mat-card-title{
+
+    display: flex;
+    justify-content: center;
+}
+[postText]{
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+    background: #dddee2;
+    border-radius: 5px;
+    padding: 2%;
+}
+[postFooter]{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.avatar{
+    height: 100%;
+    border-radius: 50%;
+}
+[postFooter] p {
+    height: 50px;
+}
+.user{
+    height: 50px;
+    width: 75px;
+}
+.username{
+    position: relative;
+    bottom: 85%;
+    left: 75%;
+}
+.comment{
+    min-height: 70px;
+    width: 500px;
+    margin: 5%;
+    border-radius: 5px;
+    background: #babdc5;
+}  
+.comment-content{
+    margin: 2%;
+    display: flex;
+    background: #bdc3d3;
+    border-radius: 5px;
+    justify-content: center;
+}
+.comment-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}

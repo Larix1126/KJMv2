@@ -1,0 +1,70 @@
+<div>
+    <mat-card>
+        <mat-card-content>
+            <!-- <div class="background">
+                <img src = {{user.backgroundImage}} title = "background-image" >
+            </div> -->
+            <div class="user">
+                <img class="avatar" src = {{user.avatar}} title = {{user.name}} >
+                <strong>{{user.name}}</strong>
+                <q>{{user.bio}}</q>  
+                <div class="info">
+                   <div>
+                    <p>Company Name: {{user.companyName}}</p>
+                   </div>
+                   <div class="break"></div>
+                    <div>
+                        <p>Job Title: {{user.jobTitle}}</p> 
+                    </div>
+                </div>
+                <div class="contact">
+                    <div>
+                        <p class="contact-title">Contact:</p>
+                    </div>
+                    <div class="break"></div>
+                   <div>
+                    <p>Email: {{user.email}}</p>
+                   </div>
+                   <div class="break"></div>
+                   <div>
+                    <p>Phone Number: {{user.phoneNumber}}</p>  
+                   </div>
+                   <div class="break"></div>
+                       
+                </div>
+                
+                
+            </div>
+            <p> Posts: </p>
+        </mat-card-content>
+
+            <mat-accordion>
+                <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                        <mat-panel-description>
+                            Read Posts
+                          </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <div class="post" *ngFor='let post of user.posts'>
+                        <div>
+                            <p postText>
+                                {{post.text}}
+                            </p> 
+                            
+                            <div postFooter>
+                                <div class="user-post-avatar">     
+                                    <img class="post-avatar" src={{user.avatar}} name="avatar"/> 
+                                </div>  
+                                
+                                <p>
+                                    Dodano: {{post.createdAt | date:"dd.MM.yyyy"}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+
+    </mat-card>
+</div>
+
