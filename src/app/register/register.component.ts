@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiService } from '../Services/api.service';
 
 @Component({
@@ -18,7 +19,7 @@ export class RegisterComponent implements OnInit {
   }
   );
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -33,6 +34,7 @@ export class RegisterComponent implements OnInit {
         this.registerForm.value.email != null ? this.registerForm.value.email: '', 
         this.registerForm.value.password!= null ? this.registerForm.value.password: 'a' 
       ).subscribe();
+      this.router.navigate(['login-component']);
     }
   } 
 }

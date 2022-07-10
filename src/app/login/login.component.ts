@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   setPassword: string  = this.loginForm.value.password;
   
   
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit(): void {
 
@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
       return;
     }else {
       this.apiService.fetchLogin(this.loginForm.value.email, this.loginForm.value.password).subscribe((res: any) => console.log(res));
+      this.router.navigate(['wall-component']);
     }
   } 
 }
